@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -128,7 +129,7 @@ public class Conditions extends BaseUI{
         }
     }
 
-//we want to verify - checkbox(or radiobutton is selected or not
+// verify - checkbox(or radiobutton) is selected or not
 
     @Test
     public void test11() {
@@ -142,15 +143,65 @@ public class Conditions extends BaseUI{
         }
     }
 
-// Array List
 
+// ARRAY LIST
+
+// to get specific data from  List
     @Test
     public void test12() {
-        ArrayList <String>crunchifyList1 = new ArrayList<>(Arrays.asList("kiwi", "orange", "melon"));
-        // to get specific data from  List
-        crunchifyList1.get(0);
+        ArrayList <String> crunchifyList1 = new ArrayList<>(Arrays.asList("kiwi", "orange", "melon"));
+        String element = crunchifyList1.get(0);
+        System.out.println(element);
+    }
+
+// to get this list
+    @Test
+    public void test13() {
+        ArrayList<String> crunchifyList13 = new ArrayList<>(Arrays.asList("kiwi", "orange", "melon"));
+        if (crunchifyList13.contains("orange")) {
+            System.out.println(crunchifyList13);
+        }
+    }
+
+
+    @Test
+    public void test14() {
+        List <Integer> crunchifyList13 = new ArrayList<>(Arrays.asList(5, 10, 19));
+        int sum = crunchifyList13.get(1) + crunchifyList13.get(2);
+        System.out.println(sum);
     }
 
 
 
+// !!!FOR-LOOP!!!
+
+//  how many elements the list has
+//  print all elements of list (Web elements)
+//  click on every element(every link in this case, every time bach on main page)
+/*
+output:
+8
+HOME
+HOW WE WORK
+PRETTY WOMEN
+PHOTOS
+GIFTS
+TOUR TO UKRAINE
+BLOG
+SIGN IN
+*/
+
+    @Test
+    public void test15(){
+        List<WebElement> links = driver.findElements(By.xpath("//ul[@class='navbar-nav']//li"));
+        System.out.println(links.size());
+
+        for (int i = 0; i < links.size(); i++) {
+            String info = links.get(i).getText();
+            System.out.println(info);
+            links.get(i).click();
+            driver.get(Data.mainUrl);
+            links = driver.findElements(By.xpath("//ul[@class='navbar-nav']//li"));
+        }
+    }
 }
