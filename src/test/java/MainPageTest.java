@@ -82,12 +82,10 @@ public class MainPageTest extends BaseUI {
 
 
     @Test
-    public void testIFrame() throws InterruptedException {
-        Thread.sleep(3000);
+    public void testIFrame() {
         WebElement ele = driver.findElement(By.cssSelector("iframe[src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']"));
         driver.switchTo().frame(ele);
         driver.findElement(By.cssSelector("button[class='ytp-large-play-button ytp-button']")).click();
-        Thread.sleep(3000);
     }
 
 }
