@@ -83,9 +83,9 @@ public class MainPagesTests extends BaseUI {
 
     @Test
     public void testIFrame() {
-        WebElement ele = driver.findElement(By.cssSelector("iframe[src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']"));
+        WebElement ele = driver.findElement(Locators.IFRAME);
         driver.switchTo().frame(ele);
-        driver.findElement(By.cssSelector("button[class='ytp-large-play-button ytp-button']")).click();
+        driver.findElement(Locators.IFRAME_BUTTON).click();
     }
 
 }

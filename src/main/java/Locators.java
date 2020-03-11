@@ -30,7 +30,8 @@ public class Locators {
     public static final By LINK_GIFTS = By.cssSelector("a[href='https://romanceabroad.com/store/category-sweets']");
     public static final By LINK_TOURS_TO_UKRAINE = By.cssSelector("a[href='https://romanceabroad.com/store/sweets/20-tour_to_ukraine']");
     public static final By LINK_BLOG = By.cssSelector("a[href='https://romanceabroad.com/content/view/blog']");
-
+    public static final By IFRAME = By.cssSelector("iframe[src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
+    public static final By IFRAME_BUTTON = By.cssSelector("button[class='ytp-large-play-button ytp-button']");
 
     // for https://www.computerhope.com/jargon/r/radiobut.htm Lesson 8
     public static final By RADIO_BUTTON = By.xpath("//input[@value='V1']");
