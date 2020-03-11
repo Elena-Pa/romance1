@@ -34,7 +34,7 @@ public class BaseUI {
 
         // Check if parameter passed as 'chrome'
         else if (browser.equalsIgnoreCase("chrome")) {
-            // Set path to chromedriver.exe
+            // Set path to chromedriver
             System.setProperty("webdriver.chrome.driver", "chromedriver");
             // Create chrome instance
             driver = new ChromeDriver();
