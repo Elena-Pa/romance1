@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
-public class MainPageTest extends BaseUI {
+public class MainPagesTests extends BaseUI {
 
     boolean requirement = true;
     boolean requirement2 = false;
@@ -27,7 +27,7 @@ public class MainPageTest extends BaseUI {
         driver.findElement(Locators.LINK_HOW_WE_WORK).click();
         currentUrlHowItWorks = driver.getCurrentUrl();
         System.out.println("Current url is " + currentUrlHowItWorks);
-        Assert.assertEquals(currentUrlHowItWorks, Data.expectedUrlHowItWorks);
+        Assert.assertEquals(currentUrlHowItWorks, Data.EXPECTED_URL_HOW_IT_WORKS);
     }
 
 
@@ -36,7 +36,7 @@ public class MainPageTest extends BaseUI {
         driver.findElement(Locators.LINK_GIFTS).click();
         currentUrlGifts = driver.getCurrentUrl();
         System.out.println("Current url is " + currentUrlGifts);
-        Assert.assertEquals(currentUrlGifts, Data.expectedUrlGifts);
+        Assert.assertEquals(currentUrlGifts, Data.EXPECTED_URL_GIFTS);
     }
 
 
@@ -45,7 +45,7 @@ public class MainPageTest extends BaseUI {
         driver.findElement(Locators.LINK_TOURS_TO_UKRAINE).click();
         currentUrlToursToUkraine = driver.getCurrentUrl();
         System.out.println("Current url is " + currentUrlToursToUkraine);
-        Assert.assertEquals(currentUrlToursToUkraine, Data.expectedUrlToursToUkraine);
+        Assert.assertEquals(currentUrlToursToUkraine, Data.EXPECTED_URL_TOURS_TO_UKRAINE);
     }
 
 
@@ -54,7 +54,7 @@ public class MainPageTest extends BaseUI {
         driver.findElement(Locators.LINK_BLOG).click();
         currentUrlBlog = driver.getCurrentUrl();
         System.out.println("Current url is " + currentUrlBlog);
-        Assert.assertEquals(currentUrlBlog, Data.expectedUrlBlog);
+        Assert.assertEquals(currentUrlBlog, Data.EXPECTED_URL_BLOG);
     }
 
 
@@ -77,7 +77,7 @@ public class MainPageTest extends BaseUI {
     @Test
     public void testTitle() {
         actualTitle = driver.getTitle();
-        Assert.assertEquals(Data.expectedTitle, actualTitle);
+        Assert.assertEquals(Data.EXPECTED_TITLE, actualTitle);
     }
 
 

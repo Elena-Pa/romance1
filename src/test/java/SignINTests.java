@@ -1,6 +1,6 @@
 import org.testng.annotations.Test;
 
-public class SignINTest extends BaseUI {
+public class SignINTests extends BaseUI {
 
     int indexLinkSignIn = 0;
 

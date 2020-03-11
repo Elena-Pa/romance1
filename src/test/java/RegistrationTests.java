@@ -1,7 +1,7 @@
 
 import org.testng.annotations.Test;
 
-public class RegistrationTest extends BaseUI {
+public class RegistrationTests extends BaseUI {
 
     @Test
     public void testRegistration() {

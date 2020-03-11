@@ -2,7 +2,7 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class MediaTest extends BaseUI {
+public class MediaTests extends BaseUI {
 
     String currentUrlMedia;
 
@@ -11,7 +11,7 @@ public class MediaTest extends BaseUI {
         driver.findElement(Locators.LINK_MEDIA).click();
         currentUrlMedia = driver.getCurrentUrl();
         System.out.println("Current url is " + currentUrlMedia);
-        Assert.assertEquals(currentUrlMedia, Data.expectedUrlMedia);
+        Assert.assertEquals(currentUrlMedia, Data.EXPECTED_URL_MEDIA);
 
     }
 }
