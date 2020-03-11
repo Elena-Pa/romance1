@@ -27,7 +27,7 @@ public class BaseUI {
         // Check if parameter passed from TestNG is 'firefox'
         if (browser.equalsIgnoreCase("firefox")) {
             // Create firefox instance
-            System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
+            System.setProperty("webdriver.gecko.driver", "geckodriver");
             driver = new FirefoxDriver();
         }
 
@@ -35,7 +35,7 @@ public class BaseUI {
         // Check if parameter passed as 'chrome'
         else if (browser.equalsIgnoreCase("chrome")) {
             // Set path to chromedriver.exe
-            System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "chromedriver");
             // Create chrome instance
             driver = new ChromeDriver();
             driver.get("chrome://settings/clearBrowserData");
@@ -48,7 +48,7 @@ public class BaseUI {
 
 
         } else {
-            System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "chromedriver");
             driver = new ChromeDriver();
             driver.get("chrome://settings/clearBrowserData");
         }

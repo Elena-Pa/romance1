@@ -5,6 +5,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
+
 public class SearchTests extends BaseUI {
 
     String currentUrlSearch;
@@ -28,6 +30,7 @@ public class SearchTests extends BaseUI {
     @Test
     public void testSearchFromDropDownListByValue1(){
         driver.findElement(Locators.LINK_SEARCH).click();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         Select select = new Select(driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY));
         select.selectByValue("name");
     }
@@ -36,6 +39,7 @@ public class SearchTests extends BaseUI {
     @Test
     public void testSearchFromDropDownListByText1(){
         driver.findElement(Locators.LINK_SEARCH).click();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         Select select = new Select(driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY));
         select.selectByVisibleText("Views");
     }
@@ -44,6 +48,7 @@ public class SearchTests extends BaseUI {
     @Test
     public void testSearchFromDropDownListByIndex1(){
         driver.findElement(Locators.LINK_SEARCH).click();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         Select select = new Select(driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY));
         select.selectByIndex(2);
     }
@@ -52,6 +57,7 @@ public class SearchTests extends BaseUI {
     @Test
     public void testSearchFromDropDownListByValue2(){
         driver.findElement(Locators.LINK_SEARCH).click();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         WebElement dropDownListSortBy = driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY);
         searchPage.getDropDownListByValue(dropDownListSortBy, "name");
     }
@@ -60,6 +66,7 @@ public class SearchTests extends BaseUI {
     @Test
     public void testSearchFromDropDownListByText2(){
         driver.findElement(Locators.LINK_SEARCH).click();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         WebElement dropDownListSortBy = driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY);
         searchPage.getDropDownListByText(dropDownListSortBy, "Views");
     }
@@ -68,6 +75,7 @@ public class SearchTests extends BaseUI {
     @Test
     public void testSearchFromDropDownListByIndex2(){
         driver.findElement(Locators.LINK_SEARCH).click();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         WebElement dropDownListSortBy = driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY);
         searchPage.getDropDownListByIndex(dropDownListSortBy, 3);
     }
@@ -76,9 +84,9 @@ public class SearchTests extends BaseUI {
 // Web elements:
 // Radio Button
 
-    // for https://www.computerhope.com/jargon/r/radiobut.htm
+    // from https://www.computerhope.com/jargon/r/radiobut.htm
     @Test
-    public void testRadioButtons() throws InterruptedException {
+    public void testRadioButtons(){
         if (!driver.findElement(Locators.RADIO_BUTTON).isSelected()) {
             System.out.println("This radio-button is already selected");
         } else {

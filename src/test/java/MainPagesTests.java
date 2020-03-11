@@ -62,7 +62,7 @@ public class MainPagesTests extends BaseUI {
     public void testPageText1() {
         currentTextUkrainianGirls = driver.findElement(Locators.TEXT_UKRAINIAN_GIRLS).getText();
         System.out.println("Page Text:  " + currentTextUkrainianGirls);
-        Assert.assertEquals(currentTextUkrainianGirls, expectedTextUkrainianGirls);
+        Assert.assertEquals(currentTextUkrainianGirls, Data.TEXT_UKRAINIAN_GIRLS_DATING_SITE);
     }
 
 
@@ -70,7 +70,7 @@ public class MainPagesTests extends BaseUI {
     public void testPageText2() {
         currentTextFindYourLove = driver.findElement(Locators.TEXT_FIND_YOUR_LOVE).getText();
         System.out.println("Page Text:  " + currentTextFindYourLove);
-        Assert.assertEquals(currentTextFindYourLove, expectedTextFindYourLove);
+        Assert.assertEquals(currentTextFindYourLove, Data.TEXT_FIND_YOUR_LOVE_YOUR_WIFE_YOUR_DREAM);
     }
 
 
