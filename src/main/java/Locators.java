@@ -7,6 +7,7 @@ public class Locators {
     // Search
     public static final By LINK_SEARCH = By.xpath("//a[@href='https://romanceabroad.com/users/search']");
     public static final By DROP_DOWN_LIST_SORT_BY = By.xpath("//div[@class='form-inline']//select");
+    public static final By IMAGE_ELEMENT_SEARCH_PAGE = By.xpath("//a[@class='g-pic-border g-rounded']");
     // Media
     public static final By LINK_MEDIA = By.cssSelector("a[href='https://romanceabroad.com/media/index']");
     // Registration
@@ -32,7 +33,8 @@ public class Locators {
     public static final By LINK_BLOG = By.cssSelector("a[href='https://romanceabroad.com/content/view/blog']");
     public static final By IFRAME = By.cssSelector("iframe[src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
     public static final By IFRAME_BUTTON = By.cssSelector("button[class='ytp-large-play-button ytp-button']");
-
+    public static final By TITLE_OF_PAGE = By.xpath("//h1");
+    public static final By TAB_OF_MAIN_PAGE = By.xpath("//ul[@class='navbar-nav']//li");
     // for https://www.computerhope.com/jargon/r/radiobut.htm Lesson 8
     public static final By RADIO_BUTTON = By.xpath("//input[@value='V1']");
     public static final By SEARCH_FROM_RADIO_BUTTON = By.xpath("//input[@value='V4']");
