@@ -398,9 +398,9 @@ SIGN IN
     }
 
 
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  SUPER TEST CASE  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//                                            TEST CASE FOR LOOP !!!
 
-// This TEST CASE can be a pattern for a lot of new test cases (it can verify titles, images, element is displayed, element is present, and more)
+// This TEST CASE can be like a pattern for a lot of new test cases (it can verify links on the Main Page and also, for example, the titles, images, element is displayed, element is present.)
     @Test
     public void test25() {
         String actualTitle;
